@@ -34,7 +34,7 @@ func _input(event):
 func reset():
 	Active = true
 	dead = false
-	body.set_rot(deg2rad(0))
+	get_node("anim").play(animName)
 
 func die(onGround):
 	dead = true
