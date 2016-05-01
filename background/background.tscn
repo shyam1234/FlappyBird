@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://background/bg_day.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Sprite\n\nfunc _ready():\n\tvar clock = OS.get_time()[\'hour\']\n\tif clock >= 19 or clock < 8:\n\t\tset_texture(load(\"res://background/bg_night.png\"))"
+
+[node name="Background" type="Sprite"]
+
+transform/pos = Vector2( 170.274, 301.083 )
+transform/scale = Vector2( 1.18899, 1.16829 )
+texture = ExtResource( 1 )
+script/script = SubResource( 1 )
+
+
