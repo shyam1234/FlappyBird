@@ -8,8 +8,8 @@ script/source = "extends Sprite\n\nfunc _ready():\n\tvar clock = OS.get_time()[\
 
 [node name="Background" type="Sprite"]
 
-transform/pos = Vector2( 170.274, 301.083 )
-transform/scale = Vector2( 1.18899, 1.16829 )
+transform/pos = Vector2( 170.062, 300.956 )
+transform/scale = Vector2( 1.2014, 1.18342 )
 texture = ExtResource( 1 )
 script/script = SubResource( 1 )
 
