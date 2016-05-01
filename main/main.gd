@@ -51,8 +51,8 @@ func _start():
 	get_node("Score").show()
 	get_node("Tutorial").hide()
 	playing = true
-	bird.Active = true
-	bird.dead = false
+
+	bird.reset()
 	birdBody.move_to(bird.get_pos())
 	get_node("Collisons/Pipes").Active = true
 	

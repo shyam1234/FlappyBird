@@ -1,0 +1,16 @@
+[gd_resource type="SampleLibrary" load_steps=6 format=1]
+
+[ext_resource path="res://sounds/sfx_die.smp" type="Sample" id=1]
+[ext_resource path="res://sounds/sfx_hit.smp" type="Sample" id=2]
+[ext_resource path="res://sounds/sfx_point.smp" type="Sample" id=3]
+[ext_resource path="res://sounds/sfx_wing.smp" type="Sample" id=4]
+[ext_resource path="res://sounds/sfx_swooshing.smp" type="Sample" id=5]
+
+[resource]
+
+samples/swooshing = { "db":0.0, "pitch":1.0, "sample":ExtResource( 5 ) }
+samples/bird_hit = { "db":0.0, "pitch":1.0, "sample":ExtResource( 2 ) }
+samples/bird_drop = { "db":0.0, "pitch":1.0, "sample":ExtResource( 1 ) }
+samples/bird_swing = { "db":0.0, "pitch":1.0, "sample":ExtResource( 4 ) }
+samples/bird_point = { "db":0.0, "pitch":1.0, "sample":ExtResource( 3 ) }
+
