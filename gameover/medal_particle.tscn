@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://flappybird/blink_02.png" type="Texture" id=1]
+[ext_resource path="res://gameover/blink_02.png" type="Texture" id=1]
 
 [node name="Particles2D" type="Particles2D"]
 

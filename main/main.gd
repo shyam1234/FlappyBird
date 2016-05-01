@@ -68,6 +68,7 @@ func _gameOver():
 func reset():
 	remove_child(overScene)
 	score = 0
+	bird.Active = false
 	get_node("Score").Value = 0
 	get_node("Collisons/Pipes").reset()
 	get_node("Collisons/Ground/anim").play("translate")

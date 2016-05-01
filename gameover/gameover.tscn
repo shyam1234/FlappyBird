@@ -1,15 +1,14 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://gameover/gameover.gd" type="Script" id=1]
 [ext_resource path="res://gameover/text_game_over.png" type="Texture" id=2]
 [ext_resource path="res://gameover/score_panel.png" type="Texture" id=3]
 [ext_resource path="res://gameover/medal_particle.tscn" type="PackedScene" id=4]
-[ext_resource path="res://gameover/blink_02.png" type="Texture" id=5]
-[ext_resource path="res://gameover/medals_3.png" type="Texture" id=6]
-[ext_resource path="res://number/number.tscn" type="PackedScene" id=7]
-[ext_resource path="res://gameover/new.png" type="Texture" id=8]
-[ext_resource path="res://gameover/button_play.png" type="Texture" id=9]
-[ext_resource path="res://gameover/button_play_pressed.png" type="Texture" id=10]
+[ext_resource path="res://gameover/medals_2.png" type="Texture" id=5]
+[ext_resource path="res://number/number.tscn" type="PackedScene" id=6]
+[ext_resource path="res://gameover/new.png" type="Texture" id=7]
+[ext_resource path="res://gameover/button_play.png" type="Texture" id=8]
+[ext_resource path="res://gameover/button_play_pressed.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
 
@@ -64,17 +63,13 @@ texture = ExtResource( 3 )
 transform/pos = Vector2( -64.8864, 3.5849 )
 config/amount = 20
 config/preprocess = 0.1
-config/texture = ExtResource( 5 )
-params/gravity_strength = 9.8
-randomness/gravity_direction = 0.744633
-randomness/radial_accel = 0.0666667
 
 [node name="Sprite" type="Sprite" parent="Panel/Medal"]
 
 transform/pos = Vector2( -64.8864, 3.5849 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
-[node name="Score" parent="Panel" instance=ExtResource( 7 )]
+[node name="Score" parent="Panel" instance=ExtResource( 6 )]
 
 margin/left = 69.0
 margin/top = -19.0
@@ -82,7 +77,7 @@ margin/right = 109.0
 margin/bottom = 21.0
 rect/scale = Vector2( 0.5, 0.5 )
 
-[node name="BestScore" parent="Panel" instance=ExtResource( 7 )]
+[node name="BestScore" parent="Panel" instance=ExtResource( 6 )]
 
 margin/left = 69.0
 margin/top = 27.0
@@ -94,7 +89,7 @@ rect/scale = Vector2( 0.5, 0.5 )
 
 visibility/visible = false
 transform/pos = Vector2( 22.8082, 24.3666 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="RestartButton" type="TextureButton" parent="."]
 
@@ -111,8 +106,8 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 toggle_mode = false
-textures/normal = ExtResource( 9 )
-textures/pressed = ExtResource( 10 )
+textures/normal = ExtResource( 8 )
+textures/pressed = ExtResource( 9 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
