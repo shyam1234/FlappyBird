@@ -14,12 +14,12 @@ func _ready():
 	bird = get_node("Collisons/Bird")
 	birdBody = bird.get_node("Body")
 	_initBirdPos = birdBody.get_pos()
-	
+	set_process_input(true)
 	set_process(true)
 	get_node("Score").hide()
 	
 	
-func _input_event(event):
+func _input(event):
 	if event.is_action_pressed("tap"):
 		if not playing:
 			_start()

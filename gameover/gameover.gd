@@ -5,6 +5,7 @@ var isBest = false
 func _ready():
 	get_node("Panel/Score").Value = score
 	get_node("RestartButton").connect("pressed", self, "_onRestart")
+	set_process_input(true)
 	
 	var savepath = "user://savegame.save"
 	var file = File.new()
@@ -42,5 +43,10 @@ func _ready():
 		get_node("Panel/Medal/Sprite").set_texture(tex)
 	else:
 		get_node("Panel/Medal").hide()
+		
+func _input(event):
+	if event.is_action("tap"):
+		_onRestart()
+
 func _onRestart():
 	get_node("/root/Control").reset()

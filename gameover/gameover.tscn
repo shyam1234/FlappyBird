@@ -63,6 +63,9 @@ texture = ExtResource( 3 )
 transform/pos = Vector2( -64.8864, 3.5849 )
 config/amount = 20
 config/preprocess = 0.1
+params/gravity_strength = 9.8
+randomness/gravity_direction = 0.744633
+randomness/radial_accel = 0.0666667
 
 [node name="Sprite" type="Sprite" parent="Panel/Medal"]
 
