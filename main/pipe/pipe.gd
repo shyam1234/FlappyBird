@@ -1,4 +1,6 @@
 extends Node2D;
+export var BrownPipePercent = 10; 
+
 var MaxSpace = 10;
 var MinSpace = 5;
 var landHeight = preload("res://ground/land.png").get_size().height
@@ -26,6 +28,10 @@ func _ready():
 	var downPos = get_node("Down").get_pos() + accessOffset
 	downPos.y +=  accessize.height/2
 	get_node("Down").set_pos(downPos)
+	
+	if rand_range(0,100) < (100 - BrownPipePercent):
+		get_node("Down/Sprite").set_texture(load("res://main/pipe/pipe2_up.png"))
+		get_node("Up/Sprite").set_texture(load("res://main/pipe/pipe2_down.png"))
 	
 	
 func _bodyExitPipe(body):
